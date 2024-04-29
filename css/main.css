@@ -26,20 +26,24 @@
 .header .header-right {
   display: flex;
 }
-.header .header-right div {
-  margin-right: 50px;
-}
-
-.call-text {
+.header .header-right .call-text {
   color: #666666;
   margin-right: 100px;
 }
-.call-text span {
+.header .header-right .call-text span {
   color: #000;
   font-weight: bold;
 }
 @media (max-width: 1199px) {
-  .call-text {
+  .header .header-right .call-text {
+    display: none;
+  }
+}
+.header .header-right div {
+  margin-right: 50px;
+}
+@media (max-width: 767px) {
+  .header .header-right .head-icons {
     display: none;
   }
 }
@@ -68,16 +72,6 @@
   display: flex;
 }
 
-@media screen and (max-width: 1000px) {
-  .call-text {
-    display: none;
-  }
-}
-@media screen and (max-width: 750px) {
-  .head-icons {
-    display: none;
-  }
-}
 * {
   margin: 0;
   padding: 0;

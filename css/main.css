@@ -21,7 +21,9 @@
 }
 .header .head-lg .text {
   font-size: 12px;
+  font-weight: 300;
   color: #999999;
+  line-height: 0.1;
 }
 .header .header-right {
   display: flex;
@@ -52,6 +54,9 @@
   color: #000;
   margin-right: 20px;
 }
+.fa:hover {
+  color: #cee002;
+}
 .fa:last-child {
   margin-right: 0;
 }
@@ -68,8 +73,47 @@
   width: 100%;
   background-color: #000;
 }
-.burger div.header-right {
+
+.footer {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  padding: 100px 0;
+}
+.footer .header-left .head-lg {
+  display: flex;
+}
+.footer .header-left .head-lg img {
+  height: 100%;
+  margin-right: 20px;
+}
+.footer .header-left .head-lg .logo .name {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 0.8;
+}
+.footer .header-left .head-lg .logo .text {
+  font-size: 12px;
+  font-weight: 300;
+  color: #999999;
+}
+.footer div span {
+  display: block;
+}
+.footer li {
+  align-content: center;
+}
+.footer a {
+  color: #000000;
+}
+@media (max-width: 768px) {
+  .footer {
+    flex-wrap: wrap;
+  }
+}
+.footer .head-icons a {
+  color: #000;
 }
 
 * {
@@ -148,9 +192,13 @@ div.main-content {
 
 div.bd2 {
   display: flex;
-  justify-content: center;
-  padding: 150px 50px;
-  margin: 0 auto;
+  padding: 150px 0;
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+  div.bd2 {
+    flex-wrap: wrap;
+  }
 }
 div.bd2 .lf-side h3 {
   color: #cee002;
@@ -202,12 +250,18 @@ div.bd2 div.rgside .dots {
 
 .bd3 .bd3head {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
 }
 .bd3 .bd3head h2 {
   color: #000;
   font-size: 40px;
   width: 40%;
+}
+@media (max-width: 767px) {
+  .bd3 .bd3head h2 {
+    font-size: 30px;
+  }
 }
 .bd3 .bd3head .bd3nav {
   color: #000;
@@ -219,25 +273,43 @@ div.bd2 div.rgside .dots {
   margin-right: 30px;
   color: #000;
 }
+.bd3 .bd3head .bd3nav a:hover {
+  color: #cee002;
+}
 .bd3 .bd3head .bd3nav a:last-child {
+  color: #999999;
   margin-right: 0;
   margin-left: 50px;
   font-style: italic;
+  font-weight: 200;
 }
 .bd3 .bd3-slider {
   display: flex;
+  overflow: hidden;
+  overflow-x: scroll;
 }
 .bd3 .bd3-slider .b3-content {
   position: relative;
   height: 75vh;
   flex: 0 0 33.3333333333%;
   overflow: hidden;
+  padding: 0 20px;
+}
+@media (max-width: 1199px) {
+  .bd3 .bd3-slider .b3-content {
+    flex: 0 0 100%;
+    padding: 0;
+  }
+}
+@media (max-width: 767px) {
+  .bd3 .bd3-slider .b3-content:last-child {
+    display: none;
+  }
 }
 .bd3 .bd3-slider .b3-content img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  padding-top: 10px;
   z-index: 1;
 }
 .bd3 .bd3-slider .b3-content .b3-text {
@@ -303,25 +375,39 @@ div.bd2 div.rgside .dots {
 }
 .bd4 div.b4-content .b4-box span:last-child {
   font-size: 14px;
-  color: red;
+  color: #999999;
 }
-.bd4 div.b4-content .b4-box span p {
+.bd4 div.b4-content .b4-box p {
   font-size: 14px;
+  color: #999999;
+}
+@media (max-width: 767px) {
+  .bd4 div.b4-content .b4-box:last-child {
+    display: none;
+  }
 }
 .bd4 .partner {
   margin-top: 100px;
-  padding: 20px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 .bd4 .partner img {
   height: 100%;
   object-fit: cover;
 }
+@media (max-width: 767px) {
+  .bd4 .partner img:nth-last-child(-n+2) {
+    display: none;
+  }
+}
 
+.bd5 {
+  padding: 100px 0;
+}
 .bd5 .container .b5-head {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 50px;
 }
 .bd5 .container .b5-head h2 {
   font-size: 36px;
@@ -333,21 +419,18 @@ div.bd2 div.rgside .dots {
 }
 .bd5 .container .b5-content {
   display: flex;
-  justify-content: space-between;
+  margin: 0 -10px;
 }
-
-.footer {
-  display: flex;
-  justify-content: space-between;
+.bd5 .container .b5-content div {
+  width: 33.3333333333%;
   align-items: center;
-  margin-top: 100px;
-  font-size: 14px;
+  justify-content: center;
+  padding: 10px;
 }
-.footer div span {
-  display: block;
-}
-.footer a {
-  color: #666666;
+.bd5 .container .b5-content div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=main.css.map */

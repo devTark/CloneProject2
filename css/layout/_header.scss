@@ -23,7 +23,9 @@
 
     .text {
       font-size: 12px;
+      font-weight: 300;
       color: #999999;
+      line-height: .1;
     }
   }
 
@@ -56,12 +58,13 @@
   }
 }
 
-
-
-
 .fa {
   color: $clrblack;
   margin-right: 20px;
+
+  &:hover {
+    color: $clrgreen;
+  }
 
   &:last-child {
     margin-right: 0;
@@ -80,10 +83,6 @@
     width: 100%;
     background-color: $clrblack;
 
-  }
-
-  div.header-right {
-    display: flex;
   }
 }
 

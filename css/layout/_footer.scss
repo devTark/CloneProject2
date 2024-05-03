@@ -3,7 +3,12 @@
   justify-content: space-between;
   align-items: center;
   font-size: 14px;
-  padding: 100px 0;
+  height: 400px;
+  padding: 50px 0;
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+  }
 
   .header-left .head-lg {
     display: flex;
@@ -31,19 +36,19 @@
     display: block;
   }
 
-  li {
-    align-content: center;
-  }
   a {
     color: #000000;
-  }
-
-  @media (max-width: 768px) {
-    flex-wrap: wrap;
   }
 
   .head-icons a {
     color: $clrblack;
   }
+}
 
+.ft-item {
+  @media (max-width: 768px) {
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+  }
 }
